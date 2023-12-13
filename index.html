@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website - Divya</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="portofolio/logo.jpg" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Portofolio">Portofolio</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>WELCOME</p>
+                <h1>Hi I'm<span>V.Meghana</span><br> I'm a Btech Student</h1>
+            </div>
+        </div>  
+    </div>
+<!-- -----------About----------- -->
+    <div id="About">
+        <div class="container">
+            <div class="row">
+                <div class="About-col-1">
+                    <img src="portofolio/profile.jpg">               
+                </div>
+                <div class="About-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Diligent and adaptable BTech student eager to kickstart a career in Artifical Intelligence
+                        and Data Science.Seeking an entry-level position to apply theoretical knowledge gained in 
+                        coursework and develop practical skills in any domain.Quick learner with a strong work ethic,
+                        ready to contribute positively to a dynamic team environment. Committed to leveraging academic
+                        foundation and enthusiasm to contribute effectively to any project.
+                    </p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick= "opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick= "opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Programming languages</span><br>Python:
+                                    Basic understanding, eager to expand knowledge through practical projects.</li>
+                                <li><span>Web Development</span><br>Html:Proficient in creating structured and semantic web pages.
+                                    <br>Css:Competent in styling and layout for user-friendly interfaces.
+                                    <br>Java script:Familiar with basic scripting for interactive web elements.</li>
+                                <li><span>Soft Skills</span><br>Problem-solving: Analytical approach to challenges.
+                                    <br>Adaptability:Quick learner, open to acquiring new skills.
+                                    <br>Collaboration:Effective team player.</li>
+                                    <div class="tab-contents" id="education">
+                                        <ul>
+                                            <li><span>2021-Present</span><br>Pursuing Btech at Sree Venkateswara College Of Engineering, Nellore.</li>
+                                            <li><span>2019-21</span><br>+2 from Narayana Junior College, Nellore.</li>
+                                            <li><span>Passed Out-2019</span><br>10th from Narayana High School, Nellore.</li>
+                                        </ul>
+                                    </div>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----------portofolio---------->
+     <div id="portofolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="portofolio/work-1.png">
+                    <div class="layer">
+                        <h3>Community Service project</h3>
+                        <p>"Led a community service project focused on sustainable agriculture,
+                            engaging stakeholders, and implementing modern farming practices.
+                            Achieved positive impact by fostering community involvement
+                            and promoting environmental awareness."
+                        </p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="portofolio/work-2.png">
+                    <div class="layer">
+                        <h3>Paper Presentation</h3>
+                        <p>I have presented a Paper Presentation and Poster Presentation
+                         at NBKR's Inforium orgainsed in the college by the department Of
+                         IT and AI&DS, showcase valuable insights and fostering knowledge exchange.
+                        </p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="portofolio/work-3.png">
+                    <div class="layer">
+                        <h3>Workshop</h3>
+                        <p>I actively participated in an AWS Workshop conducted by SVCN,
+                            gaining practical insights and enchancing my skills in cloud 
+                          computing,
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+    <!----------contact---------->
+    <div id="Contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact me</h1>
+                    <p>ccontact@example.com</p>
+                    <p>0123456789</p>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+        }
+    
+</script>
+
+</body>
+</html>
